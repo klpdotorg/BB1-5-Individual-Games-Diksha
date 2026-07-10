@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+	<title>BB Game 2.2</title>
+<style>
+            @media screen and (orientation: landscape) and (min-width:375px) {
+             body {
+                 padding: 0px;
+                 margin: 0px;
+/*                    background: url(assets/commonAssets/gradeSelectBg.png);*/
+                 background-size:cover;
+                 width:100%;
+                 height: 100%;
+             }
+
+             /* home */
+             .home {
+                 padding: 10px;
+             }
+
+             .home img{
+                 cursor:pointer;
+                 width:7%;
+                 height:7%;
+             }
+
+             /* For numbers */
+             .title {
+                 padding: 3px;
+                 font-size: x-large;
+                 background-color: #d75bb9eb;
+                 text-align:center;
+                 color:white;
+                 height: 38px;
+                 width: 152px;
+                 margin-left: 88px;
+                 margin-top: 24px;
+                 border-radius: 7px;
+             
+             }
+
+             .block-1 {
+                 display:flex;
+                 flex-direction: column;
+             }
+
+             .numbers-block {
+                 background-color: #d75bb9eb;
+                 margin-left: 64px;
+                 margin-right:64px;
+                 border-radius: 30px;
+             }
+
+             .grid-container-numbers {
+                 display: grid;
+                 grid-template-columns: auto auto auto auto;
+                 grid-row-gap: 44px;
+                 grid-column-gap: 15px;
+                 align-items: center;
+                 justify-items: center;
+                 margin: 28px;
+                 padding: 15px;
+             }
+
+             .imgBlock{
+                 position: relative;
+                 text-align:center;
+             }
+
+             .num {
+                 position: absolute;
+                 height: 24%;
+                 width: 16%;
+                 background-color: rgb(73 58 25);
+                 top: 48%;
+                 right: 5%;
+                 text-align: center;
+                 font-size: 14px;
+                 color: white;
+                 border-radius: 2px;
+             }
+
+             /* For integers */
+             .title1 {
+                 padding: 3px;
+                 font-size: x-large;
+                 background-color: #d75bb9eb;
+                 text-align:center;
+                 color:white;
+                 height: 38px;
+                 width: 210px;
+                 margin-left: 88px;
+                 margin-top: 26px;
+                 border-radius: 7px;
+             }
+
+             .block-2 {
+                 display:flex;
+                 flex-direction: column;
+             }
+
+             .integers-block {
+                 background-color: #d75bb9eb;
+                 margin-left: 64px;
+                 margin-right:64px;
+                 border-radius: 30px;
+             }
+
+             .grid-container-integers {
+                 display: grid;
+                 grid-template-columns: auto auto auto auto;
+                 grid-row-gap: 44px;
+                 grid-column-gap: 15px;
+                 align-items: center;
+                 justify-items: center;
+                 margin: 28px;
+                 padding: 15px;
+             }
+
+             .num1 {
+                 position: absolute;
+                 height: 24%;
+                 width: 17%;
+                 background-color: rgb(73 58 25);
+                 top: 48%;
+                 right: 6%;
+                 text-align: center;
+                 font-size: 14px;
+                 color: white;
+                 border-radius: 2px;
+             }
+
+             /* For fractions */
+             .title2 {
+                 padding: 3px;
+                 font-size: x-large;
+                 background-color: #d75bb9eb;
+                 text-align:center;
+                 color:white;
+                 height: 38px;
+                 width: 152px;
+                 margin-left: 88px;
+                 margin-top: 26px;
+                 border-radius: 7px;
+             }
+
+             .block-3 {
+                 display:flex;
+                 flex-direction: column;
+             }
+
+             .fractions-block {
+                 background-color: #d75bb9eb;
+                 margin-left: 64px;
+                 margin-right:64px;
+                 border-radius: 30px;
+             }
+
+             .grid-container-fractions {
+                 display: grid;
+                 grid-template-columns: auto auto auto auto;
+                 grid-row-gap: 44px;
+                 grid-column-gap: 15px;
+                 align-items: center;
+                 justify-items: center;
+                 margin: 28px;
+                 padding: 15px;
+             }
+
+             .num2 {
+                 position: absolute;
+                 height: 23%;
+                 width: 15%;
+                 background-color: rgb(73 58 25);
+                 font-size: 14px;
+                 top: 49%;
+                 text-align: center;
+                 color: white;
+                 border-radius: 2px;
+             }
+
+             img {
+                 width: 100%;
+                 height: 100%;
+             }
+
+             img[class= "FSM-2"],img[class= "FSM-5"] {
+                 width: 67%;
+                 height: 100%;
+             }
+             .FSM-2{
+                 margin-left: -52%;
+             }
+
+             .FSM-5{
+                 margin-left: -150%;
+             }
+
+             span[id= "span-num2"],span[id= "span-num5"]
+             {
+                 margin-left: -18%;
+             } 
+             
+            
+
+             #LANGUAGE{
+             display:none;
+         }
+             #firs{
+             display:none;
+         }
+         }
+         @media screen and (min-device-width: 1200px) 
+         { 
+             body {
+                 padding: 0px;
+                 margin: 0px;
+/*                    background: url(assets/commonAssets/gradeSelectBg.png);*/
+                 background-size:cover;
+                 width:100%;
+                 height: 100%;
+             }
+
+            /* home */
+            .home {
+                 padding: 5px;
+             }
+
+             .home img{
+                 cursor:pointer;
+                 width:4%;
+                 height:4%;
+             }
+
+             /* For numbers */
+             .title {
+                 padding: 3px;
+                 font-size: x-large;
+                 background-color: #d75bb9eb;
+                 text-align:center;
+                 color:white;
+                 height: 38px;
+                 width: 152px;
+                 margin-left: 88px;
+                 margin-top: 24px;
+                 border-radius: 7px;
+             }
+
+             .block-1 {
+                 display:flex;
+                 flex-direction: column;
+             }
+
+             .numbers-block {
+                 background-color: #d75bb9eb;
+                 margin-left: 64px;
+                 margin-right:64px;
+                 border-radius: 30px;
+             }
+
+             .grid-container-numbers {
+                 display: grid;
+                 grid-template-columns: auto auto auto auto auto;
+                 grid-row-gap: 57px;
+                 align-items: center;
+                 justify-items: center;
+                 margin: 20px;
+                 padding: 8px;
+
+             }
+
+             .imgBlock{
+                 position: relative;
+             }
+
+             .num {
+                 position: absolute;
+                 height: 17%;
+                 width: 15%;
+                 background-color: rgb(73 58 25);
+                 top: 55%;
+                 right: 6%;
+                 text-align: center;
+                 color:white;
+                 border-radius: 2px;
+             }
+
+             /* For integers */
+             .title1 {
+                 padding: 3px;
+                 font-size: x-large;
+                 background-color: #d75bb9eb;
+                 text-align:center;
+                 color:white;
+                 height: 38px;
+                 width: 210px;
+                 margin-left: 88px;
+                 margin-top: 26px;
+                 border-radius: 7px;
+             }
+
+             .block-2 {
+                 display:flex;
+                 flex-direction: column;
+             }
+
+             .integers-block {
+                 background-color: #d75bb9eb;
+                 margin-left: 64px;
+                 margin-right:64px;
+                 border-radius: 30px;
+             }
+
+             .grid-container-integers {
+                 display: grid;
+                 grid-template-columns: auto auto auto auto auto;
+                 grid-row-gap: 57px;
+                 align-items: center;
+                 justify-items: center;
+                 margin: 20px;
+                 padding: 8px;
+             }
+
+             .num1 {
+                 position: absolute;
+                 height: 18%;
+                 width: 15%;
+                 background-color: rgb(73 58 25);
+                 top: 55%;
+                 right: 6%;
+                 text-align: center;
+                 color:white;
+                 border-radius: 2px;
+             }
+
+             /* For fractions */
+             .title2 {
+                 padding: 3px;
+                 font-size: x-large;
+                 background-color: #d75bb9eb;
+                 text-align:center;
+                 color:white;
+                 height: 38px;
+                 width: 152px;
+                 margin-left: 88px;
+                 margin-top: 26px;
+                 border-radius: 7px;
+             }
+
+             .block-3 {
+                 display:flex;
+                 flex-direction: column;
+             }
+
+             .fractions-block {
+                 background-color: #d75bb9eb;
+                 margin-left: 64px;
+                 margin-right:64px;
+                 border-radius: 30px;
+             }
+
+             .grid-container-fractions {
+                 display: grid;
+                 grid-template-columns: auto auto auto auto auto;
+                 grid-row-gap: 57px;
+                 align-items: center;
+                 justify-items: center;
+                 margin: 20px;
+                 padding: 8px;
+             }
+
+             .num2 {
+                 position: absolute;
+                 height: 18%;
+                 width: 15%;
+                 background-color: rgb(73 58 25);
+                 top: 55%;
+                 text-align: center;
+                 color:white;
+                 border-radius: 2px;
+             }
+
+             .FSM-2{
+                 margin-left: -64%;
+             }
+
+             .FSM-5{
+                 margin-left: -188%;
+             }
+
+             span[id= "span-num2"],span[id= "span-num5"]
+             {
+                 margin-left: -20%;
+             } 
+             img {
+                 width: 100%;
+                 height: 100%;
+             }
+             img[class= "FSM-2"],img[class= "FSM-5"] {
+                 width: 100%;
+                 height: 100%
+             }
+             #LANGUAGE{
+             display:none;
+         }
+         }
+       
+
+       @font-face {
+             font-family: myfont;
+             src: url(myfont.otf);
+             font-style: "normal";
+             font-size: "12 px";
+         } 
+
+        @font-face {
+             font-family: gradefont;
+             src: url(gradefont.otf);
+             font-style: "normal";
+             font-size: "12 px";
+         }
+         @font-face {
+             font-family: Akzidenz-Grotesk BQ;
+             src: url(AkzidenzGrotesk-Bold.otf);
+             font-style: "normal";
+             font-size: "12 px";
+         }
+         #firs{
+             display:none;
+         }
+ </style>
+</head>
+<body id="body">
+<div id="deviceready"><div id="first"></div></div>
+
+	<!--<script type="text/javascript" src="cordova.js"></script>-->
+
+	<script type="text/javascript" src="js/htmlinterface.js"></script>
+	<script src="js/commonjsfiles/phaser.min.js"></script>
+	<script type="text/javascript" src="js/telemetryInitializer.js"></script>
+	<script src="js/commonjsfiles/jquery.min.js"></script>
+	<script src="js/commonjsfiles/shake.js"></script>
+	<script src="js/commonjsfiles/boot.js"></script>
+	<script src="js/commonjsfiles/preloader_2_2.js"></script>
+		<script src="js/gradejs/2_2/level1.js"></script>
+		<script src="js/gradejs/2_2/score.js"></script>
+	<script src="js/commonjsfiles/score.js"></script>
+	<script src="js/commonjsfiles/backbutton.js"></script>
+	<script src="js/commonjsfiles/loadJson_Score.js"></script>
+
+	<script type="text/javascript">
+		window.baseUrl = '';
+		window.quizQuest = false;
+		window.gradeSelected = null;
+		window.telInitializer2 = telInitializer;
+		// No-op stubs for methods commonFiles.js calls via telInitializer2 that MT5.1 doesn't have
+		telInitializer.syncToServer = function(){};
+		telInitializer.finishChallengeActivityToFirebase = function(){};
+		telInitializer.gameQuestionStart = function(){};
+		telInitializer.gameCorrectAns = function(){};
+		telInitializer.gameWrongAns = function(){};
+		window.timeSaveFunc = function() {
+			var t = new Date();
+			var dd = t.getDate(), mm = t.getMonth()+1, yyyy = t.getFullYear();
+			var hr = t.getHours(), min = t.getMinutes(), sec = t.getSeconds();
+			if(dd<10) dd='0'+dd; if(mm<10) mm='0'+mm;
+			return yyyy+':'+mm+':'+dd+':'+hr+':'+min+':'+sec;
+		};
+		function home(){}
+		function func(src){
+			sessionStorage.setItem("param2",src);
+			var script=document.createElement('script');
+			script.src="js/index.js";
+			document.head.appendChild(script);
+		}
+		func("length2_2");
+	</script>
+
+</body>
+</html>
