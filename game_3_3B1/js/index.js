@@ -1,0 +1,29 @@
+var _this;
+
+var app={
+	initialize:function(){
+		if(window.cordova){
+			document.addEventListener('deviceready',this.onDeviceReady.bind(this),false);
+			return;
+		}
+		this.receivedEvent();
+	},
+	onDeviceReady:function(){ this.receivedEvent(); },
+	receivedEvent:function(id){
+		var game=new Phaser.Game(960,540,Phaser.CANVAS,'');
+
+		game.state.add('boot',Game.boot);
+		game.state.add('preloader_3_3B1',Game.preloader_3_3B1);
+
+		// Game states
+		game.state.add('grade3_3B1level1', Game.grade3_3B1level1);
+		game.state.add('grade3_3B1Score', Game.grade3_3B1Score);
+
+		// Common states
+		game.state.add('score',Game.Score);
+		game.state.add('Backbutton',Game.Backbutton);
+
+		game.state.start('boot');
+	}
+};
+app.initialize();
