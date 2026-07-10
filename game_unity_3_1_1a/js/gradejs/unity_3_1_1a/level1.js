@@ -126,6 +126,7 @@ create:function(game)
         _this.stopvoice();
         _this.clickSound = _this.add.audio('ClickSound');
         _this.clickSound.play();
+        _this.state.start('Backbutton');
          
         },_this,0,1,2);
        
@@ -3240,7 +3241,7 @@ numClicked:function(target){
                          _this.stopvoice();
                         //_this.timer1.stop();
                          //_this.timer1=null;
-                         _this.state.start('unity3_1_1aScore');
+                         _this.state.start('Backbutton');
                     }
 
 

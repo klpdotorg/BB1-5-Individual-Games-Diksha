@@ -1433,7 +1433,16 @@ Game.unity7_2_1level1.prototype={
         }
                     
         _this.playQuestionSound.appendChild(_this.src);
-		_this.playQuestionSound.play();
+		var playPromise = _this.playQuestionSound.play();
+		if(playPromise && playPromise.catch)
+		{
+			playPromise.catch(function(error){
+				if(!error || error.name !== "AbortError")
+				{
+					console.warn(error);
+				}
+			});
+		}
         },
 
         stopVoice:function(){

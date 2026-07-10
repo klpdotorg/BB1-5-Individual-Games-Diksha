@@ -236,11 +236,9 @@ Game.preloader_unity_7_1_3.prototype={
 				_self.world.height / (vid.height || 540)
 			);
 			vid.play(false);
-			vid.changeSource(window.baseUrl+"assets/demoVideos/7_1_3.mp4");
-			vid.play(false);
 			vid.playbackRate = 1;
 			_this.time.events.add(2000, function(){
-				if(window.languageSelected == "Telugu" || window.languageSelected == "Tamil" || window.languageSelected == "Urdu")
+				if(window.languageSelected == "Telugu" || window.languageSelected == "Urdu")
 				{
 					_this.playDemoVideos('7_1_3New');
 				}
@@ -275,6 +273,7 @@ Game.preloader_unity_7_1_3.prototype={
 	},
 
 	playDemoVideos:function(target){
+		_this.stopDemoVoice();
 		_this.playQuestionSound = document.createElement('audio');
 		_this.src = document.createElement('source');
 		switch(target)
@@ -412,7 +411,20 @@ Game.preloader_unity_7_1_3.prototype={
 				break;
 		}
 		_this.playQuestionSound.appendChild(_this.src);
-		_this.playQuestionSound.play();
+		_this.playQuestionSound.load();
+		this.playMediaSafely(_this.playQuestionSound, "demo voice");
+	},
+
+	playMediaSafely:function(mediaElem, label) {
+		var playPromise = mediaElem.play();
+		if (playPromise && playPromise.catch) {
+			playPromise.catch(function(error) {
+				if (error && error.name === "AbortError") {
+					return;
+				}
+				console.warn("Unable to play " + label + ".", error);
+			});
+		}
 	},
 
 	amplifyMedia:function(mediaElem, multiplier) {

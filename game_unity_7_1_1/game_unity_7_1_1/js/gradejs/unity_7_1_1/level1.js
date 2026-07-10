@@ -1365,7 +1365,7 @@ removeEverthing:function()
             _this.getQuestion();
             
         }
-        else if(window.languageSelected == "English")
+        else
         {
            _this.timer1.stop();
            _this.timer1 = null;

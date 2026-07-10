@@ -235,7 +235,6 @@ Game.preloader_unity_7_1_2.prototype={
 				_self.world.width / (vid.width || 960),
 				_self.world.height / (vid.height || 540)
 			);
-			vid.play(false);
 			vid.changeSource(window.baseUrl+"assets/demoVideos/7_1_2.mp4");
 			vid.play(false);
 			vid.playbackRate = 1;

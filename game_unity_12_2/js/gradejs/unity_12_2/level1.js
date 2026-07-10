@@ -138,7 +138,7 @@ create:function(game)
         _this.backbtn = _this.add.button(-3,3,'newCommonBackBtnForAll',function(){
             _this.clickSound = _this.add.audio('ClickSound');
             _this.clickSound.play();
-            //console.log("here");
+            _this.closeGame();
         },_this,0,1,2);
 
         _this.speaker = _this.add.button(600,6,'unity1_1CommonSpeakerBtn',function(){
@@ -7069,9 +7069,7 @@ numberBoxClicked:function(target){
                 else
                     {
                          
-                         _this.stopvoice();
-                         _this.timer1=null;
-                         _this.state.start('unity12_2Score');
+                         _this.closeGame();
                   }
 
 
@@ -7258,7 +7256,7 @@ numberBoxClicked:function(target){
           return result;
     },
     
-stopvoice:function(){
+    stopvoice:function(){
             
           if(_this.playQuestionSound)
           {
@@ -7291,6 +7289,25 @@ stopvoice:function(){
                 _this.amplify = null;
             }
         },
+
+    closeGame:function()
+    {
+        _this.stopvoice();
+
+        if(_this.timer)
+        {
+            _this.timer.stop();
+            _this.timer = null;
+        }
+
+        if(_this.timer1)
+        {
+            _this.timer1.stop();
+            _this.timer1 = null;
+        }
+
+        telInitializer.tele_end();
+    },
 
 
     shutdown:function()

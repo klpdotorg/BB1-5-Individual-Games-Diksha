@@ -226,6 +226,9 @@ Game.preloader_unity_7_2_3.prototype={
 		_this = this;
 		_this.playQuestionSound = null;
 		_this.src = null;
+		if(typeof window.languageSelected === "undefined" || !window.languageSelected){
+			window.languageSelected = "Tamil";
+		}
 		function startGame(){ _self.state.start('unity7_2_3level1'); }
 		if (_self.cache.checkKey(Phaser.Cache.VIDEO, 'demo7_1_1')) {
 			var vid = _self.add.video('demo7_1_1');
@@ -234,8 +237,6 @@ Game.preloader_unity_7_2_3.prototype={
 				_self.world.width / (vid.width || 960),
 				_self.world.height / (vid.height || 540)
 			);
-			vid.play(false);
-			vid.changeSource(window.baseUrl+"assets/demoVideos/7_2_3.mp4");
 			vid.play(false);
 			vid.playbackRate = 1;
 			_this.time.events.add(2000, function(){
@@ -277,6 +278,7 @@ Game.preloader_unity_7_2_3.prototype={
 	},
 
 	playDemoVideos:function(target){
+		_this.stopDemoVoice();
 		_this.playQuestionSound = document.createElement('audio');
 		_this.src = document.createElement('source');
 		switch(target)
@@ -443,8 +445,32 @@ Game.preloader_unity_7_2_3.prototype={
 				}
 				break;
 		}
+		if(!_this.src.getAttribute("src"))
+		{
+			var englishDemoVoice = {
+				"7_2_3a": "assets/DemoVOs/English/Game 7.2.3a.mp3",
+				"7_2_3b": "assets/DemoVOs/English/Game 7.2.3b.mp3",
+				"7_2_3c": "assets/DemoVOs/English/Game 7.2.3c.mp3",
+				"7_2_3d": "assets/DemoVOs/English/Game 7.2.3d.mp3",
+				"7_2_3New": "assets/DemoVOs/English/Game 7.2.3a.mp3"
+			};
+			_this.src.setAttribute("src", window.baseUrl+englishDemoVoice[target]);
+		}
 		_this.playQuestionSound.appendChild(_this.src);
-		_this.playQuestionSound.play();
+		var playPromise = _this.playQuestionSound.play();
+		if(playPromise && playPromise.catch)
+		{
+			playPromise.catch(function(){
+				var retryDemoVoice = function(){
+					if(_this.playQuestionSound)
+					{
+						_this.playQuestionSound.play().catch(function(){});
+					}
+				};
+				document.addEventListener('pointerdown', retryDemoVoice, { once: true });
+				document.addEventListener('touchstart', retryDemoVoice, { once: true });
+			});
+		}
 	},
 
 	amplifyMedia:function(mediaElem, multiplier) {
@@ -478,6 +504,11 @@ Game.preloader_unity_7_2_3.prototype={
 			}
 			_this.playQuestionSound = null;
 			_this.src = null;
+		}
+		if(_this.amplify!=null)
+		{
+			_this.amplify.context.close();
+			_this.amplify = null;
 		}
 	}
 };

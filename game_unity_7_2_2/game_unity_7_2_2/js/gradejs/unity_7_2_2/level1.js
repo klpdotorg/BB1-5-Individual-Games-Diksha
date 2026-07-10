@@ -1807,7 +1807,16 @@ if((coinset=="full" && (_this.YellowAnimInc1 == ((_this.displayNumber1 + _this.d
         }
                     
         _this.playQuestionSound.appendChild(_this.src);
-		_this.playQuestionSound.play();
+		var playPromise = _this.playQuestionSound.play();
+		if(playPromise && playPromise.catch)
+		{
+			playPromise.catch(function(error){
+				if(!error || error.name !== "AbortError")
+				{
+					console.warn(error);
+				}
+			});
+		}
         },
 
 		amplifyMedia:function(mediaElem, multiplier) {

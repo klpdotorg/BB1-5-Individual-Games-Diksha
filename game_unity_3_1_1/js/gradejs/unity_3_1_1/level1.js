@@ -337,6 +337,7 @@ init:function(game)
             
             _this.clickSound = _this.add.audio('ClickSound');
             _this.clickSound.play();
+            _this.closeEntireTab();
              
         },_this);
 
@@ -1742,7 +1743,7 @@ gotoEleventhQuestion:function(){
             _this.timer1 = null;
             _this.counterForTimer = null;
              _this.stopVoice();
-            _this.state.start('unity3_1_1Score');
+            _this.closeEntireTab();
         }
     },
     
@@ -1997,8 +1998,35 @@ wrongAns:function(target)
 		{
 			_this.amplify.context.close();
 			_this.amplify = null;
-		}
+        }
             
+        },
+
+        closeEntireTab:function()
+        {
+            var firstScreen = document.getElementById("first");
+
+            if(firstScreen)
+            {
+                firstScreen.style.display = "block";
+            }
+
+            setTimeout(function()
+            {
+                if(_this.game)
+                {
+                    _this.game.paused = true;
+                    _this.game.input.enabled = false;
+                }
+
+                window.open("", "_self");
+                window.close();
+
+                if(window.RI && window.RI.gotoEndPage)
+                {
+                    window.RI.gotoEndPage();
+                }
+            }, 150);
         }
 
     

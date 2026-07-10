@@ -224,6 +224,9 @@ Game.preloader_unity_7_2_1.prototype={
 	create:function(){
 		var _self = this;
 		_this = this;
+		if(typeof window.languageSelected === "undefined" || !window.languageSelected){
+			window.languageSelected = "Tamil";
+		}
 		_this.playQuestionSound = null;
 		_this.src = null;
 		function startGame(){ _self.state.start('unity7_2_1level1'); }
@@ -234,7 +237,6 @@ Game.preloader_unity_7_2_1.prototype={
 				_self.world.width / (vid.width || 960),
 				_self.world.height / (vid.height || 540)
 			);
-			vid.play(false);
 			vid.changeSource(window.baseUrl+"assets/demoVideos/7_2_1.mp4");
 			vid.play(false);
 			if(window.languageSelected == "Gujarati")
@@ -399,8 +401,22 @@ Game.preloader_unity_7_2_1.prototype={
 				}
 				break;
 		}
+		if(!_this.src.getAttribute("src"))
+		{
+			console.warn("Demo voice not found for language: " + window.languageSelected);
+			return;
+		}
 		_this.playQuestionSound.appendChild(_this.src);
-		_this.playQuestionSound.play();
+		var playPromise = _this.playQuestionSound.play();
+		if(playPromise && playPromise.catch)
+		{
+			playPromise.catch(function(error){
+				if(!error || error.name !== "AbortError")
+				{
+					console.warn(error);
+				}
+			});
+		}
 	},
 
 	amplifyMedia:function(mediaElem, multiplier) {

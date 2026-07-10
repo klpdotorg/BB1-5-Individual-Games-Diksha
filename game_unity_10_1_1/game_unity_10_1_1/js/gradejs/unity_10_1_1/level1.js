@@ -1289,13 +1289,16 @@ if(_this.displayNopad){
             _this.getQuestion();
             
           }
-          else if(window.languageSelected == "English")
+          else
       {
-           _this.timer1.stop();
-           _this.timer1 = null;
+           if(_this.timer1)
+           {
+            _this.timer1.stop();
+            _this.timer1 = null;
+           }
            _this.counterForTimer = null;
            _this.stopVoice();
-           _this.state.start('score');
+           _this.state.start('Backbutton');
          }
        },
 

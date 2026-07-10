@@ -437,6 +437,26 @@
 
 	<!--<script type="text/javascript" src="cordova.js"></script>-->
 
+	<script type="text/javascript">
+		(function () {
+			if (!window.HTMLMediaElement || !HTMLMediaElement.prototype.play) return;
+
+			var nativePlay = HTMLMediaElement.prototype.play;
+
+			HTMLMediaElement.prototype.play = function () {
+				var playPromise = nativePlay.apply(this, arguments);
+
+				if (playPromise && typeof playPromise.catch === 'function') {
+					return playPromise.catch(function (error) {
+						if (error && error.name === 'AbortError') return;
+						return Promise.reject(error);
+					});
+				}
+
+				return playPromise;
+			};
+		}());
+	</script>
 	<script type="text/javascript" src="js/htmlinterface.js"></script>
 	<script src="js/commonjsfiles/phaser.min.js"></script>
 	<script type="text/javascript" src="js/telemetryInitializer.js"></script>
@@ -454,6 +474,9 @@
 		window.baseUrl = '';
 		window.quizQuest = false;
 		window.gradeSelected = null;
+		if(typeof window.languageSelected === "undefined" || !window.languageSelected){
+			window.languageSelected = "Tamil";
+		}
 		window.telInitializer2 = telInitializer;
 		// No-op stubs for methods commonFiles.js calls via telInitializer2 that MT5.1 doesn't have
 		telInitializer.syncToServer = function(){};

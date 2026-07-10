@@ -28,7 +28,27 @@ var telInitializer = {
 
 	tele_end:function()
 	{
-		RI.gotoEndPage();
+		if(window.RI && window.RI.exit)
+		{
+			try
+			{
+				window.RI.exit();
+				return;
+			}
+			catch(error) {}
+		}
+
+		if(window.RI && window.RI.gotoEndPage)
+		{
+			try
+			{
+				window.RI.gotoEndPage();
+			}
+			catch(error) {}
+		}
+
+		window.open("", "_self");
+		window.close();
 	},
 
 
@@ -36,7 +56,5 @@ var telInitializer = {
 
 
 };
-
-
 
 

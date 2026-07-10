@@ -259,7 +259,7 @@ Game.preloader_unity_7_1_1.prototype={
 	},
 
 	playDemoVideos:function(target){
-		window.languageSelected="English";
+		window.languageSelected="Tamil";
 		_this.playQuestionSound = document.createElement('audio');
 		_this.src = document.createElement('source');
 		switch(target)
