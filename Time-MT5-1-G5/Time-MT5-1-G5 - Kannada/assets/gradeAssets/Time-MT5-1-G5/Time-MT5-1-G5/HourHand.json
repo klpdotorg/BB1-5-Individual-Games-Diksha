@@ -1,0 +1,27 @@
+﻿{"frames": [
+
+{
+	"filename": "Symbol 13 instance 10000",
+	"frame": {"x":0,"y":0,"w":61,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":61,"h":20},
+	"sourceSize": {"w":61,"h":20}
+}
+,{
+	"filename": "Symbol 13 instance 10001",
+	"frame": {"x":0,"y":20,"w":61,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":61,"h":20},
+	"sourceSize": {"w":61,"h":20}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "24.0.12.3",
+	"image": "Hour hand.png",
+	"format": "RGBA8888",
+	"size": {"w":61,"h":40},
+	"scale": "1"
+}
+}

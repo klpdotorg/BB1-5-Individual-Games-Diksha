@@ -1,0 +1,27 @@
+﻿{"frames": [
+
+{
+	"filename": "Symbol 12 instance 10000",
+	"frame": {"x":0,"y":0,"w":80,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":25},
+	"sourceSize": {"w":80,"h":25}
+}
+,{
+	"filename": "Symbol 12 instance 10001",
+	"frame": {"x":0,"y":25,"w":80,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":25},
+	"sourceSize": {"w":80,"h":25}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "24.0.12.3",
+	"image": "Minute hand.png",
+	"format": "RGBA8888",
+	"size": {"w":80,"h":52},
+	"scale": "1"
+}
+}

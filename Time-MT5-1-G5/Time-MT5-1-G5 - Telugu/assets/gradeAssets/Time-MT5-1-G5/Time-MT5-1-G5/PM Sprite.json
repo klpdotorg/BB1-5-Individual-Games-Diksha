@@ -1,0 +1,27 @@
+﻿{"frames": [
+
+{
+	"filename": "Symbol 8 copy instance 10000",
+	"frame": {"x":0,"y":0,"w":58,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":58,"h":32},
+	"sourceSize": {"w":58,"h":32}
+}
+,{
+	"filename": "Symbol 8 copy instance 10001",
+	"frame": {"x":58,"y":0,"w":58,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":58,"h":32},
+	"sourceSize": {"w":58,"h":32}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "24.0.12.3",
+	"image": "PM Sprite.png",
+	"format": "RGBA8888",
+	"size": {"w":116,"h":32},
+	"scale": "1"
+}
+}
