@@ -1,0 +1,27 @@
+﻿{"frames": [
+
+{
+	"filename": "Symbol 74 instance 10000",
+	"frame": {"x":0,"y":0,"w":281,"h":286},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":281,"h":286},
+	"sourceSize": {"w":281,"h":286}
+}
+,{
+	"filename": "Symbol 74 instance 10001",
+	"frame": {"x":281,"y":0,"w":281,"h":286},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":281,"h":286},
+	"sourceSize": {"w":281,"h":286}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "24.0.13.5",
+	"image": "Analog clock 2.png",
+	"format": "RGBA8888",
+	"size": {"w":563,"h":287},
+	"scale": "1"
+}
+}

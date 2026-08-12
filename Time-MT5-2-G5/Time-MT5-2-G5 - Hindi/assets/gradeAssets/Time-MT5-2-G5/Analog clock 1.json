@@ -1,0 +1,27 @@
+﻿{"frames": [
+
+{
+	"filename": "Symbol 27 instance 10000",
+	"frame": {"x":0,"y":0,"w":301,"h":325},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":301,"h":325},
+	"sourceSize": {"w":301,"h":325}
+}
+,{
+	"filename": "Symbol 27 instance 10001",
+	"frame": {"x":301,"y":0,"w":301,"h":325},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":301,"h":325},
+	"sourceSize": {"w":301,"h":325}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "24.0.13.5",
+	"image": "Analog clock 1.png",
+	"format": "RGBA8888",
+	"size": {"w":602,"h":327},
+	"scale": "1"
+}
+}

@@ -1,0 +1,27 @@
+﻿{"frames": [
+
+{
+	"filename": "Symbol 16 instance 10000",
+	"frame": {"x":0,"y":0,"w":273,"h":295},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":273,"h":295},
+	"sourceSize": {"w":273,"h":295}
+}
+,{
+	"filename": "Symbol 16 instance 10001",
+	"frame": {"x":273,"y":0,"w":273,"h":295},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":273,"h":295},
+	"sourceSize": {"w":273,"h":295}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "24.0.13.5",
+	"image": "Pink headed analog clock.png",
+	"format": "RGBA8888",
+	"size": {"w":546,"h":295},
+	"scale": "1"
+}
+}

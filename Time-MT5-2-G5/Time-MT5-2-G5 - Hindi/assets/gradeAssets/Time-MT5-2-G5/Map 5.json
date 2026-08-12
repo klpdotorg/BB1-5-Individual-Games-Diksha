@@ -1,0 +1,35 @@
+﻿{"frames": [
+
+{
+	"filename": "Symbol 106 instance 10000",
+	"frame": {"x":0,"y":0,"w":961,"h":540},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":961,"h":540},
+	"sourceSize": {"w":961,"h":540}
+}
+,{
+	"filename": "Symbol 106 instance 10001",
+	"frame": {"x":961,"y":0,"w":961,"h":540},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":961,"h":540},
+	"sourceSize": {"w":961,"h":540}
+}
+,{
+	"filename": "Symbol 106 instance 10002",
+	"frame": {"x":1922,"y":0,"w":961,"h":540},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":961,"h":540},
+	"sourceSize": {"w":961,"h":540}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "24.0.12.3",
+	"image": "Map 5.png",
+	"format": "RGBA8888",
+	"size": {"w":2883,"h":540},
+	"scale": "1"
+}
+}

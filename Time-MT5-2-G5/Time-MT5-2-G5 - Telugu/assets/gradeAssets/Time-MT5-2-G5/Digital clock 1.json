@@ -1,0 +1,27 @@
+﻿{"frames": [
+
+{
+	"filename": "Symbol 25 instance 10000",
+	"frame": {"x":0,"y":0,"w":355,"h":310},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":355,"h":310},
+	"sourceSize": {"w":355,"h":310}
+}
+,{
+	"filename": "Symbol 25 instance 10001",
+	"frame": {"x":355,"y":0,"w":355,"h":310},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":355,"h":310},
+	"sourceSize": {"w":355,"h":310}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "24.0.13.5",
+	"image": "Digital clock 1.png",
+	"format": "RGBA8888",
+	"size": {"w":714,"h":310},
+	"scale": "1"
+}
+}

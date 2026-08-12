@@ -1,0 +1,27 @@
+﻿{"frames": [
+
+{
+	"filename": "Symbol 15 instance 10000",
+	"frame": {"x":0,"y":0,"w":253,"h":275},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":253,"h":275},
+	"sourceSize": {"w":253,"h":275}
+}
+,{
+	"filename": "Symbol 15 instance 10001",
+	"frame": {"x":253,"y":0,"w":253,"h":275},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":253,"h":275},
+	"sourceSize": {"w":253,"h":275}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "24.0.12.3",
+	"image": "Clock_pink.png",
+	"format": "RGBA8888",
+	"size": {"w":506,"h":275},
+	"scale": "1"
+}
+}

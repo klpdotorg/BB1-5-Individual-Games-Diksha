@@ -1,0 +1,27 @@
+﻿{"frames": [
+
+{
+	"filename": "Symbol 83 instance 10000",
+	"frame": {"x":0,"y":0,"w":65,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":19},
+	"sourceSize": {"w":65,"h":19}
+}
+,{
+	"filename": "Symbol 83 instance 10001",
+	"frame": {"x":65,"y":0,"w":65,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":19},
+	"sourceSize": {"w":65,"h":19}
+}],
+"meta": {
+	"app": "Adobe Animate",
+	"version": "24.0.12.3",
+	"image": "Minute time.png",
+	"format": "RGBA8888",
+	"size": {"w":131,"h":19},
+	"scale": "1"
+}
+}
